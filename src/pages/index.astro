@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro'
+import OzToolShell from '@chirag127/oz-chrome/components/OzToolShell.astro'
+import Builder from '../components/Builder.tsx'
+---
+
+<Base>
+  <OzToolShell site="resume" title="Resume Builder" wordmarkHref="https://oriz.in">
+    <a slot="nav" href="#builder">Builder</a>
+    <a slot="nav" href="https://github.com/chirag127/oriz-resume">Source</a>
+    <a slot="footer" href="https://github.com/chirag127/oriz-resume">GitHub</a>
+
+    <section class="hero">
+      <p class="hero__kicker">The career press · resume.oriz.in</p>
+      <h1 class="hero__title display">Set your career <em>in type.</em></h1>
+      <p class="hero__lede">
+        A resume builder that reads like an editorial masthead and parses like plain text. Fill the
+        form, watch it typeset live, print straight to PDF. Four ATS-clean templates. AI polishes
+        your bullets when you want it — never required.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--accent" href="#builder">Start writing</a>
+        <a class="btn btn--ghost" href="https://github.com/chirag127/oriz-resume">View source</a>
+      </div>
+      <div class="hero__rule"></div>
+      <div class="hero__meta">
+        <div><strong>100%</strong> in your browser</div>
+        <div><strong>0</strong> uploads, 0 signup</div>
+        <div><strong>4</strong> ATS templates</div>
+        <div><strong>PDF</strong> print-perfect</div>
+      </div>
+    </section>
+
+    <section class="features" aria-label="Features">
+      <div class="feature">
+        <h3>Live typesetting</h3>
+        <p>Every keystroke re-typesets the page on the right. What you see is what prints.</p>
+      </div>
+      <div class="feature">
+        <h3>Autosave + portability</h3>
+        <p>Saved to localStorage as you type. Export/import JSON to move between machines.</p>
+      </div>
+      <div class="feature">
+        <h3>Job-match AI</h3>
+        <p>Paste a job description: instant keyword-gap, plus optional AI bullet tailoring.</p>
+      </div>
+      <div class="feature">
+        <h3>Private by design</h3>
+        <p>No backend, no account, no analytics on your data. It never leaves the browser.</p>
+      </div>
+    </section>
+
+    <div id="builder">
+      <Builder client:load />
+    </div>
+  </OzToolShell>
+</Base>

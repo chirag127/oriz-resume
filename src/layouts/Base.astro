@@ -1,0 +1,32 @@
+---
+import '../styles/theme.css'
+import '../styles/builder.css'
+
+interface Props {
+  title?: string
+  description?: string
+}
+const {
+  title = 'oriz-resume — ATS-clean resume builder',
+  description = 'Build an ATS-clean resume in your browser. Live preview, print to PDF, autosave, JSON import/export. 100% client-side — nothing is uploaded.',
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://resume.oriz.in" />
+    <link rel="canonical" href="https://resume.oriz.in" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
