@@ -1,0 +1,79 @@
+# oriz-resume — resume.oriz.in
+
+Free ATS resume builder, set in type. A client-only tool that turns a form into a print-perfect resume. Everything runs in your browser; nothing is uploaded, no account is needed, and your draft is saved only to your own localStorage.
+
+Live app: https://resume.oriz.in
+Source: https://github.com/chirag127/oriz-resume
+License: MIT
+
+---
+
+## What it is
+
+The career press. Fill the form, watch it typeset live, print straight to PDF. Four ATS-clean templates, localStorage autosave, JSON import/export. 100% in your browser — no upload, no signup. Optional AI polishes your bullets when you want it.
+
+Headline stats: 0 uploads, 0 signup · 4 ATS templates · PDF print-perfect.
+
+## Privacy
+
+100% client-side. No upload. No signup. No tracking of your data. Everything runs in the browser and is saved only to your own localStorage. Your resume never touches a server.
+
+## Features
+
+### Live typesetting
+Every keystroke re-typesets the page. What you see is exactly what prints. The printable sheet is a true A4 preview rendered alongside the editing form.
+
+### 4 ATS-clean templates
+- Ledger — editorial serif masthead, single column.
+- Compact — dense one-page, tight leading.
+- Modern — sans, sidebar accents, airy.
+- Classic — Times-like, centred header.
+
+Plus 6 accent colors so the resume reads as yours while staying ATS-parseable.
+
+### Print → PDF
+Browser print with a scoped print stylesheet; pixel-clean output. Use your browser's "Save as PDF" to export.
+
+### Autosave
+Debounced save to localStorage; reload and your draft is there. No login, no cloud sync — the draft stays on the device you typed it on.
+
+### Import / export JSON
+Move a resume between machines; portable, human-readable. Export a JSON file, import it elsewhere to continue editing.
+
+### Job-match check
+Paste a job description for an instant, offline keyword-gap score. Runs locally — the job text never leaves the browser. Surfaces keywords present in the posting but missing from your resume.
+
+### Optional AI
+Rewrite a bullet stronger, or tailor it to a pasted job description, via @chirag127/oz-ai (g4f, multi-provider failover, no key). AI is lazy-imported only when triggered, so it stays off the initial bundle. If AI is down, the core builder works unchanged.
+
+## Resume data model
+
+The builder captures: basics (name, title, email, phone, location, website, LinkedIn, GitHub, summary), experience entries (company, role, location, dates, current flag, bullet points), education (school, degree, field, location, dates, note), projects (name, link, description, bullets), and skill groups (category + comma-separated items). Plus template and accent choice. The whole thing serializes to a single JSON document.
+
+## How to use
+
+1. Open https://resume.oriz.in.
+2. Fill the form sections: basics, experience, education, projects, skills.
+3. Pick a template and accent color; watch the live A4 preview update.
+4. (Optional) Paste a job description to run the offline keyword-gap check, or trigger AI to rewrite/tailor a bullet.
+5. Print → save as PDF from your browser, or export JSON to keep an editable copy.
+
+## FAQ
+
+**Is it free?** Yes, fully free and open-source (MIT).
+
+**Do I need an account?** No. There is no signup and no login.
+
+**Is my data uploaded anywhere?** No. Everything runs client-side; the draft is stored in your browser's localStorage and never sent to a server.
+
+**How do I export a PDF?** Use the print action and choose "Save as PDF" in your browser's print dialog. The print stylesheet is scoped for clean output.
+
+**Are the templates ATS-friendly?** Yes — all four templates are designed to be ATS-clean (parseable by applicant-tracking systems).
+
+**What if the AI feature is unavailable?** The core builder works unchanged. AI is optional and lazy-loaded only when you trigger it.
+
+**Can I move my resume to another computer?** Yes — export JSON on one machine and import it on another.
+
+## Tech
+
+Astro (static) + React 19 islands + Tailwind v4. PWA-installable. Shared atomic packages: @chirag127/oz-ai (AI), @chirag127/oz-file (import/export), @chirag127/oz-tokens-base (design tokens), @chirag127/oz-chrome (shell). AI is lazy-imported only when triggered, so it stays off the initial bundle. Deployed on Cloudflare Pages.

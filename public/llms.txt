@@ -1,0 +1,25 @@
+# oriz-resume
+
+> Free, ATS-clean resume builder that runs 100% in your browser. Fill a form, watch it typeset live, print straight to PDF. No upload, no signup, no server — drafts live only in your own localStorage.
+
+Live app: https://resume.oriz.in
+
+## Pages
+
+- [Resume builder](https://resume.oriz.in/): the single-page app — form on the left, live A4 preview on the right, print→PDF, template + accent picker, JSON import/export, job-match check, optional AI.
+
+## Features
+
+- [4 ATS-clean templates](https://resume.oriz.in/): Ledger (editorial serif, single column), Compact (dense one-page), Modern (sans, sidebar accents), Classic (Times-like, centred header) — plus 6 accent colors.
+- [Live typesetting](https://resume.oriz.in/): every keystroke re-typesets the printable A4 sheet; what you see is exactly what prints.
+- [Print → PDF](https://resume.oriz.in/): browser print with a scoped print stylesheet for pixel-clean output.
+- [Autosave](https://resume.oriz.in/): debounced save to localStorage; reload and your draft is there.
+- [Import / export JSON](https://resume.oriz.in/): move a resume between machines; portable, human-readable.
+- [Job-match check](https://resume.oriz.in/): paste a job description for an instant, offline keyword-gap score.
+- [Optional AI](https://resume.oriz.in/): rewrite a bullet stronger or tailor it to a pasted job description, via g4f multi-provider failover — no key, and the core builder works unchanged if AI is down.
+
+## More
+
+- [Full text for LLMs](https://resume.oriz.in/llms-full.txt): complete site copy as clean markdown.
+- [Source code](https://github.com/chirag127/oriz-resume): MIT-licensed, Astro + React 19 + Tailwind v4.
+- [About / info page](https://chirag127.github.io/oriz-resume/): what this project is.

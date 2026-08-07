@@ -1,10 +1,12 @@
 # oriz-resume
 
-**Live: https://resume.oriz.in**
+- **Live app:** https://resume.oriz.in
+- **About / info:** https://chirag127.github.io/oriz-resume/
+- **llms.txt:** https://resume.oriz.in/llms.txt
 
 ATS-clean resume builder that runs entirely in your browser. Fill a form, watch it typeset live, print straight to PDF. Four templates, JSON import/export, localStorage autosave, optional AI bullet-polishing.
 
-> **100% client-side. No upload. No signup. No tracking of your data.** Everything runs in the browser and is saved only to your own `localStorage`. Your resume never touches a server.
+> **100% client-side. No upload. No signup. Free.** Everything runs in the browser and is saved only to your own `localStorage`. Your resume never touches a server.
 
 ## Features
 
@@ -18,7 +20,7 @@ ATS-clean resume builder that runs entirely in your browser. Fill a form, watch 
 
 ## Stack
 
-Astro (static) + React 19 islands + Tailwind v4. Shared atomic packages: `@chirag127/oz-ai`, `@chirag127/oz-file`, `@chirag127/oz-tokens-base`, `@chirag127/oz-chrome`. AI is lazy-imported only when triggered, so it stays off the initial bundle.
+Astro (static) + React 19 islands + Tailwind v4. PWA-installable. Shared atomic packages: `@chirag127/oz-ai`, `@chirag127/oz-file`, `@chirag127/oz-tokens-base`, `@chirag127/oz-chrome`. AI is lazy-imported only when triggered, so it stays off the initial bundle.
 
 ## Develop
 

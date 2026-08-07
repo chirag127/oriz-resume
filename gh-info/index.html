@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About oriz-resume — client-side ATS resume builder</title>
+  <meta name="description" content="About oriz-resume: a free, 100% in-browser ATS resume builder. Templates, print→PDF, JSON import/export, optional AI. No upload, no signup." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f172a'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='%23f8fafc' font-family='Georgia,serif'%3ER%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --ink: #1e293b; --muted: #64748b; --bg: #f8fafc; --card: #ffffff;
+      --accent: #4338ca; --line: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 64px; }
+    .tag {
+      display: inline-block; font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--accent); font-weight: 600; margin-bottom: 12px;
+    }
+    h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; }
+    h1 .sub { color: var(--muted); font-weight: 400; }
+    .lede { font-size: 18px; color: var(--muted); margin: 0 0 28px; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 40px; }
+    a.btn {
+      display: inline-block; padding: 11px 18px; border-radius: 8px; text-decoration: none;
+      font-weight: 600; font-size: 15px;
+    }
+    a.btn--primary { background: var(--accent); color: #fff; }
+    a.btn--ghost { background: var(--card); color: var(--ink); border: 1px solid var(--line); }
+    h2 { font-size: 20px; margin: 36px 0 12px; }
+    ul { margin: 0 0 8px; padding-left: 22px; }
+    li { margin: 6px 0; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+      padding: 20px 22px; margin: 16px 0;
+    }
+    .links a { color: var(--accent); }
+    footer {
+      margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 14px;
+    }
+    footer a { color: var(--accent); }
+    code { background: #eef2ff; padding: 2px 6px; border-radius: 4px; font-size: 90%; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="tag">About this project</span>
+    <h1>oriz-resume <span class="sub">— the source & story behind resume.oriz.in</span></h1>
+    <p class="lede">A free resume builder that runs entirely in your browser: ATS-clean templates, print→PDF, JSON import/export, and an optional AI tailor. This is the info page — the live tool is over there.</p>
+
+    <div class="cta">
+      <a class="btn btn--primary" href="https://resume.oriz.in">Open the live app →</a>
+      <a class="btn btn--ghost" href="https://github.com/chirag127/oriz-resume">Source on GitHub</a>
+      <a class="btn btn--ghost" href="https://resume.oriz.in/llms.txt">llms.txt</a>
+    </div>
+
+    <h2>What it is</h2>
+    <p>Resume builder — ATS-clean templates, print→PDF, JSON import/export, optional AI tailor. Fill a form, watch it typeset live on a true A4 preview, then save straight to PDF from your browser's print dialog.</p>
+
+    <h2>Key features</h2>
+    <div class="card">
+      <ul>
+        <li><strong>4 ATS-clean templates</strong> — Ledger, Compact, Modern, Classic — plus 6 accent colors.</li>
+        <li><strong>Live typesetting</strong> — every keystroke re-typesets the printable page.</li>
+        <li><strong>Print → PDF</strong> — scoped print stylesheet for pixel-clean output.</li>
+        <li><strong>Autosave</strong> — debounced save to your browser's localStorage.</li>
+        <li><strong>Import / export JSON</strong> — portable, human-readable, move between machines.</li>
+        <li><strong>Job-match check</strong> — paste a job description for an offline keyword-gap score.</li>
+        <li><strong>Optional AI</strong> — rewrite or tailor a bullet; the core builder works even if AI is down.</li>
+      </ul>
+    </div>
+
+    <h2>How it's built</h2>
+    <div class="card">
+      <ul>
+        <li>Client-only <strong>Astro</strong> (static) + React 19 islands + Tailwind v4.</li>
+        <li><strong>g4f AI</strong> via <code>@chirag127/oz-ai</code> — multi-provider failover, no API key, lazy-loaded.</li>
+        <li><strong>PWA-installable</strong> — add to home screen, works offline.</li>
+        <li><strong>100% in-browser</strong> — no upload, no signup, no server. Your resume never leaves the device.</li>
+      </ul>
+    </div>
+
+    <h2>Links</h2>
+    <p class="links">
+      Live app: <a href="https://resume.oriz.in">resume.oriz.in</a><br />
+      Source: <a href="https://github.com/chirag127/oriz-resume">github.com/chirag127/oriz-resume</a><br />
+      For LLMs / agents: <a href="https://resume.oriz.in/llms.txt">llms.txt</a> · <a href="https://resume.oriz.in/llms-full.txt">llms-full.txt</a>
+    </p>
+
+    <footer>
+      Part of the <a href="https://oriz.in">oriz.in</a> tools. MIT-licensed. This page is an info page about the project, not the tool itself — <a href="https://resume.oriz.in">open the live app</a>.
+    </footer>
+  </div>
+</body>
+</html>
