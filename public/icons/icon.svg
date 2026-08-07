@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="oriz Resume">
+  <rect width="512" height="512" rx="96" fill="#14213d"/>
+  <rect x="140" y="96" width="232" height="304" rx="18" fill="#f7f4ee"/>
+  <rect x="176" y="150" width="160" height="20" rx="10" fill="#b3541e"/>
+  <rect x="176" y="204" width="112" height="14" rx="7" fill="#33415c"/>
+  <rect x="176" y="238" width="160" height="14" rx="7" fill="#33415c"/>
+  <rect x="176" y="272" width="136" height="14" rx="7" fill="#33415c"/>
+  <rect x="176" y="306" width="160" height="14" rx="7" fill="#33415c"/>
+  <circle cx="372" cy="384" r="52" fill="#b3541e"/>
+  <path d="M372 360v48M348 384h48" stroke="#f7f4ee" stroke-width="12" stroke-linecap="round"/>
+</svg>
