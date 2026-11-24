@@ -186,11 +186,11 @@ export function keywords(text: string): string[] {
 
 /** Flatten all user-entered resume text into one searchable string. Pure. */
 export function resumeText(r: ResumeData): string {
-  const parts: string[] = [r.basics.summary, r.basics.title]
-  for (const e of r.experience) parts.push(e.role, e.company, ...e.bullets)
+  const parts: string[] = [r.basics.summary, r.basics.title, r.basics.location]
+  for (const e of r.experience) parts.push(e.role, e.company, e.location, ...e.bullets)
   for (const p of r.projects) parts.push(p.name, p.description, ...p.bullets)
   for (const s of r.skills) parts.push(s.category, s.items)
-  for (const ed of r.education) parts.push(ed.degree, ed.field, ed.school)
+  for (const ed of r.education) parts.push(ed.degree, ed.field, ed.school, ed.location)
   return parts.join(' ')
 }
 

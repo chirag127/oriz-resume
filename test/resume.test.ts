@@ -31,6 +31,17 @@ describe('keywords', () => {
 })
 
 describe('resumeText', () => {
+  it('includes locations without relying on a school name', () => {
+    const r = emptyResume()
+    r.basics.location = 'Cambridge'
+    r.experience = [{ id: 'exp', company: '', role: '', location: 'Bristol', start: '', end: '', current: false, bullets: [] }]
+    r.education = [{ id: 'edu', school: '', degree: '', field: '', location: 'Edinburgh', start: '', end: '', note: '' }]
+    const t = resumeText(r)
+    for (const location of ['Cambridge', 'Bristol', 'Edinburgh']) expect(t).toContain(location)
+    expect(keywordGap(r, 'Cambridge Bristol Edinburgh')).toEqual({
+      matched: ['cambridge', 'bristol', 'edinburgh'], missing: [], score: 100,
+    })
+  })
   it('flattens every user field', () => {
     const t = resumeText(sampleResume())
     expect(t).toMatch(/Rust/)
